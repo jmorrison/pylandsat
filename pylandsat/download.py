@@ -66,4 +66,7 @@ class Product:
             if '.tif' in label:
                 label = label.replace('.tif', '.TIF')
             url = self._url(label)
-            download_file(url, dst_dir, progressbar=progressbar, verify=True)
+            try:
+                download_file(url, dst_dir, progressbar=progressbar, verify=True)
+            except:
+                print("Download failed for: " + url)

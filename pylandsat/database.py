@@ -129,7 +129,8 @@ def sync_wrs():
     """Download WRS2 descending shapefile from USGS and export it to a
     Spatialite-enabled SQLite table.
     """
-    WRS_URL = 'https://landsat.usgs.gov/sites/default/files/documents/WRS2_descending.zip'
+#    WRS_URL = 'https://landsat.usgs.gov/sites/default/files/documents/WRS2_descending.zip'
+    WRS_URL = 'https://prd-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/atoms/files/WRS2_descending_0.zip'
     tmpdir = tempfile.mkdtemp(prefix='pylandsat_')
     fpath = utils.download_file(WRS_URL, tmpdir)
 
